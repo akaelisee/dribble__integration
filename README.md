@@ -36,7 +36,7 @@ Je pourrais créer une mixins pour importer des composants (bouton, card, title,
 8. __FOOTER__
 
 
-> Deadline le 25/11/2020 
 ### Page à intégrer 
 Click ici :[Page Dribble à Intégrer](https://dribbble.com/shots/1424830-Freebie-PSD-MINI-OnePage-Creative-Template/attachments/208992?mode=media)
 
+> Deadline le 25/11/2020 
