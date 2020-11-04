@@ -28,9 +28,9 @@ Je pourrais créer une mixins pour importer des composants (bouton, card, title,
 3. __TEAM__
 4. __SERVICES__ avec un silder
 5. __PORTFOLIO__ avec un slider avancé et le traitement du portfolio par les catégories
->`* J'ai deux choix pour le traitement des catégories du portfolio`
->`* 1er choix : Créer un fichier json pour appeler mes Object et les traiter directement où,`
->`* 2e choix : Créer une base de données et ensuite crée un api rest avec node js tout en appelant la base de données. Et ensuite appeler l’api dans ma page pour traiter les catégories avec un filter`
+* J'ai deux choix pour le traitement des catégories du portfolio
+* 1er choix : Créer un fichier json pour appeler mes Object et les traiter directement où,
+* 2e choix : Créer une base de données et ensuite crée un api rest avec node js tout en appelant la base de données. Et ensuite appeler l’api dans ma page pour traiter les catégories avec un filter`
 6. __BLOG__
 7. __CONTACT__ avec du JavaScript
 8. __FOOTER__
