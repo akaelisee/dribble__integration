@@ -1,0 +1,166 @@
+.section-portfolio{
+    position: relative;
+    z-index: 4;
+    @include polygon;
+
+    .slide__image{
+        margin: 155px 0 122px 0;
+        .item__slide {
+            position: relative;
+            background: $bg-color-button;
+            width: 100%;
+            height: 583px;
+            i {
+                position: absolute;
+                font-size: 57px;
+                color: #ffffff;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .slide__down{
+            text-align: center;
+            margin: 45px 0;
+            .btn__slide{
+                a{
+                    text-decoration: none;
+                    border: 1px solid #dddddd;
+                    padding: 3px 14px;
+                    margin-right: 5px;
+                    position: relative;
+                    i{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+            .title__slide{
+                margin: 15px 0;
+                p{
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+                span {
+                    font-size: 14px;
+                    color: $color-font;
+                }
+            }
+        }
+    }
+    hr{
+        @include hr (100%, $color-hr)
+    }
+    .grid__portfolio{
+        margin: 120px 0;
+        .nav-project {
+            text-align: center;
+            a { 
+                font-size: 14px; 
+                font-family: $font-opensans; 
+                font-weight: bold;
+                color: $color-black;
+            }
+            .project-item{
+                &::after{
+                    content: "\\\\";
+                    padding: 0 25px;
+                    color: $color-font;
+                }
+                &:last-child::after{
+                    display: none;
+                }
+            }
+        }
+        .portfolio__project{
+            margin: 82px 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            .item__project{
+                cursor: pointer;
+                .img_project{
+                    position: relative;
+                    width: 100%;
+                    height: 220px;
+                    i{
+                        font-size: 60px;
+                        color: $color-white;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                    .plus{
+                        display: none;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        display: none;
+                        transition: all 0.2s ease;
+                    }
+                }
+                .title__project{
+                    padding: 10px 0;
+                    text-align: center;
+                    background-color: $color-white;
+                    p{
+                        font-weight: bold;
+                        font-size: 15px;
+                        transition: all 0.1s ease-in-out;
+                    }
+                    span {
+                        color: $color-text;
+                        font-size: 14px;
+                    }
+                }
+
+                &:nth-child(odd){
+                    background-color: #c7c7c7;
+                }
+                &:nth-child(even){
+                    background-color: #b7b7b7;
+                }
+                &:hover{
+                    transition: all 0.2s ease;
+
+                    .img_project{
+                        background-color: rgba(237, 234, 234, 0.281);
+                        img{
+                            display: block;
+                            opacity: 0.5;
+                            transition: all 0.2s ease;
+                        }
+                        .camera{
+                            display: none;
+                        }
+                        .plus{
+                            display: block;
+                            background-color: rgba(237, 234, 234, 0.281);
+                            i {
+                                background-color: #f0c37e;
+                                padding: 15px 20px;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                    p{
+                        transition: all 0.1s ease-in-out;
+                        color: $bg-color-button;
+                    }
+                }
+            }
+            .change{
+                &:nth-child(odd){
+                    background-color:  #b7b7b7;
+                }
+                &:nth-child(even){
+                    background-color: #c7c7c7;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.section-blog{
+    position: relative;
+    z-index: 4;
+    @include polygon;
+    .grid__blog{
+        margin: 150px 0 0 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 60px;
+        row-gap: 5px;
+        .img__blog{
+            position: relative;
+            background-color: #b7b7b7;
+            height: 302px;
+            i{
+                font-size: 60px;
+                color: $color-white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .detail__blog{
+            position: relative;
+            top: -55px;
+            display: grid;
+            grid-template-columns: 25% 75%;
+            .detail__perosn{
+                text-align: right;
+                .icon {
+                    margin: 10px 0 10px 0;
+                    i{
+                        background-color: $bg-color-button;
+                        padding: 12.5px;
+                        color: $color-white;
+                        font-size: 20px;
+                    }
+                }
+                .text{
+                    margin-top: 25px;
+                    margin-right: 23px;
+                    span{
+                        display: block;
+                        font-size: 16px;
+                        color: $color-text;
+                    }
+                }
+            }
+            .detail__desc{
+                background-color: $color-white;
+                .detail__title{
+                    padding: 16px 0;
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-left: 20px;
+                }
+                .text{
+                    margin-top: 19px;
+                    margin-left: 20px;
+                    font-size: 16px;
+                    color: $color-text;
+                }
+                .btn_blog{
+                    margin-top: 33px;
+                    a{
+                        @include button (10px 25px)
+                    }
+                }
+            }
+        }
+    }
+}

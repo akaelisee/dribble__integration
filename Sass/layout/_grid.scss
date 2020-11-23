@@ -1,0 +1,24 @@
+.l-container{
+    width: 1170px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+    }
+}
+
+.l-container-title{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.l-section{
+    padding: 101px 0;
+}
+
+.l-bg-color{
+    width: 100%;
+    background-color: $bg-color-image;
+    height: 100%;
+}

@@ -1,0 +1,91 @@
+.section-team{
+    position: relative;
+    z-index: 4;
+    @include polygon;
+
+    .article-members{
+        margin: 120px 0 0 0;
+        position: relative;
+        display: flex;
+        text-align: center;
+
+        .item-member{
+            margin: 0 10px;
+            border-top: 3px solid #fff;
+            .user{
+                border: 2px solid #eaeaea;
+                width: 71%;
+                margin: 28px auto;
+                border-radius: 50%;
+                .user-border{
+                    // width: 100%;
+                    margin: 0 auto;
+                    position: relative;
+                    border: 5px solid #f0f0f0;
+                    border-radius: 50%;
+                    padding: 88px;
+                    background: #e8f8f4;
+                    i{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 45px;
+                        color: $color-white;
+                    }
+                }
+            }
+
+            .title-user{
+                p{
+                    font-size: 20px;
+                    font-weight: 700;
+                    font-family: $font-opensans;
+                    text-transform: uppercase;
+                    line-height: 20px;
+                    color: #000;
+                }
+                span{
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: $color-text;
+                }
+            }
+            hr{
+                width: 30px;
+                height: 6px;
+                border: none;
+                background: #cccccc;
+            }
+            p{
+                color: $color-text;
+                font-size: 16px;
+                font-weight: 600;
+                padding: 0 10px;
+            }
+            .links{
+                margin: 17px 0;
+                i{
+                    margin: 0 6px;
+                    cursor: pointer;
+                    font-size: 18px;
+                    color: #999999;
+                    &:hover{
+                        transition: .2s ease;
+                        color: $bg-color-button;
+                    }
+                }
+            }
+
+            &:hover{
+                background: #f0f0f0;
+                transition: .2s;
+                border-top: 3px solid $bg-color-button;
+                hr{
+                    background: $color-red;
+                    transition: .2s;
+                }
+            }
+        }
+    }
+}

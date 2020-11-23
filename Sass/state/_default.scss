@@ -1,0 +1,15 @@
+.is-hidden{
+  display: none;
+}
+  
+.is-disply{
+  display: block;
+}
+
+.is-active{
+  color: $color-black !important;
+}
+
+.is-active-color {
+  color: $bg-color-button !important;
+}

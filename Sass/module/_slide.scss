@@ -1,0 +1,15 @@
+.swiper-container {
+    .swiper-pagination{
+        position: absolute  !important;
+        bottom: 15% !important;
+        z-index: 10;
+        // color: #fff !important;
+        span {
+            font-size: 50px !important;
+            width: 12px !important;
+            height: 12px !important;
+            background-color: #ffffff !important;
+            // color: #fff !important;
+        }
+    }
+}

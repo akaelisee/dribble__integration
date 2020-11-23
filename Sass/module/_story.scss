@@ -1,0 +1,159 @@
+.section-about{
+    position: relative;
+    z-index: 4;
+    @include polygon;
+
+    .article-story{
+        margin: 155px 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 58.90% 37%);
+        gap: 3rem;
+
+        .article-story-primary{
+            .circle{
+                float: left;
+               @include circle($bg-color-button, $color-inherit, 55px, 40px);
+            }
+            .arricle-story-text{
+                margin-left: 150px;
+                margin-top: -25px;
+                h3{
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+                p{
+                    margin: 13px 0;
+                    text-align: justify;
+                    color: $color-red;
+                    &:last-child{
+                        color: black;
+                    }
+                }
+            }
+        }
+        .article-story-second{
+            background: $color-red;
+            position: relative;
+            .article-story-profile{
+                i{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    color: #ffffff;
+                    transform: translate(-50%, -50%);
+                    font-size: 45px;
+                }
+            }
+        }
+    }
+
+    hr{
+        @include hr(100%, $color-hr);
+    }
+    
+    .article-skills{
+        margin: 126px 0 0 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        .article-showcase{
+            img{
+                width: 82%;
+            }
+        }
+        .article-our-skills{
+            .article-content{
+                .article-circle{
+                    float: left;
+                    @include circle($bg-color-button, $color-inherit, 55px, 40px);
+                }
+                .article-skills-text{
+                    margin-left: 150px;
+                    margin-top: -25px;
+                    h3{
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+                }
+            }
+            .article-bar{
+                padding: 15px 0;
+                .group-bar{
+                    margin: 34px 0;
+                    label{
+                        font-size: 16px;
+                        font-weight: 600;
+                        font-family: $font-opensans;
+                        span{
+                            color: #bfbfbf;
+                        }
+                    }
+                    .bar{
+                        width: 100%;
+                        height: 10px;
+                        background: $color-bar;
+                        position: relative;
+
+                        &::after{
+                            content: " ";
+                            position: absolute;
+                            background: $bg-color-button;
+                            height: 10px;
+                        }
+                    }
+                    .bar-design::after{
+                        width: 88%;
+                        animation: bar_design 5s;
+                    }
+                    .bar-dev::after{
+                        width: 76%;
+                        animation: bar_dev 5s;
+                    }
+                    .bar-word::after{
+                        width: 81%;
+                        animation: bar_word 5s;
+                    }
+                    .bar-drupal::after{
+                        width: 71%;
+                        animation: bar_drupal 5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes bar_design{
+    0% {
+        width: 0%;
+    }
+    100%{
+        width: 88%;
+    }
+}
+
+@keyframes bar_dev{
+    0% {
+        width: 0%;
+    }
+    100%{
+        width: 76%;
+    }
+}
+
+@keyframes bar_word{
+    0% {
+        width: 0%;
+    }
+    100%{
+        width: 81%;
+    }
+}
+
+@keyframes bar_drupal{
+    0% {
+        width: 0%;
+    }
+    100%{
+        width: 71%;
+    }
+}

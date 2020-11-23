@@ -1,0 +1,124 @@
+.section-contact{
+    position: relative;
+    z-index: 4;
+    @include polygon;
+
+    .conatct {
+        margin: 150px 0 0 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+        .mesasge{
+            .title__message{
+                font-size: 20px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            .form {
+                margin: 25px 0 15px 0;
+                .form-group{
+                    width: 100%;
+                    position: relative;
+                    input{
+                        position: relative;
+                        z-index: 2;
+                        width: 100%;
+                        outline: none;
+                        padding: 0 20px;
+                        line-height: 44px;
+                        margin: 6px 0;
+                        border: 2px solid #f3f3f3;
+                        font-size: 15px;
+                        font-family: $font-opensans;
+                        font-weight: 500;
+                        color: $color-text;
+                        &:focus {
+                            border: 2px solid $bg-color-button;
+                        }
+                        &:focus + i {
+                            color: $bg-color-button;
+                        }
+                    }
+                    i{
+                        position: absolute;
+                        right: 25px;
+                        top: 35%;
+                        z-index: 3;
+                    }
+                    textarea {
+                        width: 100%;
+                        padding: 10px 20px;
+                        resize: none;
+                        outline: none;
+                        font-family: $font-opensans;
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: $color-text;
+                        min-height: 150px;
+                        max-height: 250px;
+                        border: 2px solid #f3f3f3;
+                        &:focus {
+                            border: 2px solid $bg-color-button;
+                        }
+                        &:focus + i {
+                            color: $bg-color-button;
+                        }
+                    }
+                }
+                .pricing {
+                    i{
+                        position: absolute;
+                        right: 25px;
+                        top: 15%;
+                        z-index: 3;
+                    }
+                }
+                .btn-submit{
+                    margin-top: 22px;
+                    a{
+                        @include button (10px 15px)
+                    }
+                }
+            }
+        }
+        .info {
+            .title__message{
+                font-size: 20px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            .text{
+                margin: 25px 0;
+                font-size: 16px;
+                color: #737373;
+                line-height: 30px;
+            }
+            .link__info{
+                margin: 16px 0;
+                .item__link {
+                    margin: 15px 0;
+                    .circle{
+                        position: relative;
+                        float: left;
+                        margin-right: 15px;
+                        padding: 15px;
+                        border: 2px solid $bg-color-button;
+                        border-radius: 50%;
+                        i {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 17px;
+                            color: black;
+                        }
+                    }
+                    span {
+                        font-size: 16px;
+                        color: #737373;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.title{
+    text-transform: uppercase;
+    h1{
+        font-size: 18px;
+        font-weight: 700;
+        float: left;
+    }
+    p{
+        width: 90%;
+        font-size: 16px;
+        color: $color-text;
+        border-left: 3px solid $bg-color-button;
+        margin-left: 120px;
+        padding-left: 10px;
+    }
+}

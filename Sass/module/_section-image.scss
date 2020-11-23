@@ -1,0 +1,186 @@
+.section-image{
+    position: relative;
+    @include section-image(url(sass/img/bgImage.png));
+    .article-name{
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        line-height: 55px;
+        transform: translate(-0%, 70%);
+        p{
+            font-size: 65px;
+            font-weight: 700;
+            color: $color-white;
+            span{
+                font-size: 35px;
+                margin: 0 15px;
+            }
+        }
+        .second{
+            font-weight: 700;
+            font-size: 35px;
+            margin: 10px 0;
+            color: $color-white;
+            padding-bottom: 20px;
+        }
+        .name{
+            font-size: 24px;
+            color: $color-white;
+            font-weight: 700;
+        }
+        hr{
+            width: 3rem;
+            background: $bg-color-button;
+            height: 3px;
+            border: none;
+            box-shadow: 1px 0px 3px 0.2px $bg-color-button;
+        }
+    }
+}
+.section-image1{
+    @include section-image(url(sass/img/bgImage.png));
+    .article-project{
+        position: relative;
+        top: 160px;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+
+        .item-icon{
+            .item-icon-i{
+                @include circle($color-white, $bg-color-button, 60px, 25px);
+                margin-bottom: 25px;
+                cursor: pointer;
+                color: $color-white;
+                font-weight: 400 !important;
+            }
+            p{
+                font-size: 45px;
+                color: $color-white;
+                margin: 10px 0;
+                font-weight: 700;
+            }
+            span{
+                color: $color-white;
+                font-size: 25px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.section-image-thrid{
+    @include section-image(url(sass/img/bgImage.png));
+    .article-name{
+        position: relative;
+        top: 120px;
+        text-align: center;
+
+        .name{
+            color: $color-white;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            height: 4px !important;
+            @include hr(40px, $bg-color-button)
+        }
+        .text{
+            margin: 25px 0;
+            color: $color-white;
+            font-size: 19px;
+        }
+        .img__person {
+            width: 70%;
+            margin: 10px auto;
+            img {
+                width: 12%;
+                border-radius: 50%;
+            }
+        }
+        .slide-circle {
+            i {
+                font-size: 10px;
+                color: #ddd;
+            }
+        }
+    }
+}
+
+.section-image-four{
+    @include section-image(url(sass/img/bgImage.png));
+    .article-twitter{
+        position: relative;
+        top: 120px;
+        text-align: center;
+        
+        .circle__twitter{
+            width: 10%;
+            margin: 0 auto;
+            border: 2px solid $color-white !important;
+            @include circle($color-white, $bg-color-button, 55px, 40px);
+        }
+        .text{
+            margin: 25px 0;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 40px;
+            p{
+                color: $color-white;
+            }
+            span {
+                color: $bg-color-button;
+            }
+        }
+    }
+}
+
+.section-image-five{
+    @include section-image(url(sass/img/bgImage.png));
+    .article-customer{
+        position: relative;
+        top: 150px;
+        text-align: center;
+
+        .title__customer {
+            color: $color-white;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .grid__customer {
+            margin: 50px 0;
+            display: flex;
+            justify-content: space-around;
+            justify-self: center;
+
+            .item__customer{
+                align-self: center;
+                border: 1px solid #878787;
+                width: px;
+                .item-icon-i{
+                    height: 162px;
+                    img{
+                        position: relative;
+                        top: -20px;
+                        width: 255px;
+                    }
+                }
+
+                .color{
+                    padding: 0px 40px;
+                    line-height: 230px;
+                    img{
+                        width: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section-image-six{
+    @include section-image(url(sass/img/map.PNG));
+}

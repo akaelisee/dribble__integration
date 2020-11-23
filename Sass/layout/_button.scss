@@ -1,0 +1,14 @@
+.l-btn{
+    text-transform: uppercase;
+    border: 2px solid $bg-color-button;
+    font-style: 15px;
+    font-weight: 600;
+    font-family: $font-opensans;
+    color: $color-white;
+    transition: 0.4s;
+    &:hover{
+        transition: 0.4s;
+        background: $bg-color-button;
+        color: $color-white;
+    }
+}
