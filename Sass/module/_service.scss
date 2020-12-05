@@ -8,24 +8,36 @@
         display: flex;
         justify-content: space-around;
         text-align: center;
+        @media screen and (max-width: 680px) {
+            width: 85%;
+            flex-direction: column;
+            margin: 80px auto;
+        }
         .item-member {
-            margin: 0 15px;
+            margin: 0 1px;
             .dev {
                 width: 30%;
+                @media screen and (max-width: 680px) {
+                    width: 15%;
+                }
                 margin: 0  auto 5px auto;
                 cursor: pointer;
                 color: $color-inherit;
                 font-weight: 400 !important;
-                @include circle($bg-color-button, $color-inherit, 50px, 25px);
+                @include circle($bg-color-button, $color-inherit, 45px, 25px);
                 &:hover {
                     background-color: $bg-color-button;
                     transition: .01s !important;
                     color: #ffffff;
+                    @media screen and (max-width: 810px) {
+                        background-color: $color-green;
+                        border: 2px solid $color-green;
+                    }
                 }
             }
             .title-content {
                 margin: 0;
-                line-height: 60px;
+                line-height: 50px;
                 .name-content {
                     font-size: 20px;
                     font-weight: bold;
@@ -36,7 +48,10 @@
                 color: $color-text;
                 font-family: $font-opensans;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 15px;
+                @media screen and (max-width: 680px) {
+                    margin: 25px 0;
+                }
             }
         }
     }
@@ -44,11 +59,23 @@
         @include hr (100%, $color-hr)
     }
     .free__pricing{
-        margin: 123px 0;
+        margin: 123px 0 50px 0;
         display: flex;
         justify-content: space-between;
+        @media screen and (max-width: 740px) {
+            flex-direction: column;
+            margin: 80px 0;
+        }
+        @media screen and (max-width: 680px) {
+            flex-direction: column;
+        }
         .pricing{
-            width: 36%;
+            width: 35%;
+            @media screen and (max-width: 740px) {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 50px;
+            }
             .circle__pricing {
                 width: 105px;
                 margin-bottom: 5PX;
@@ -56,11 +83,18 @@
                 color: $color-inherit;
                 font-weight: 400 !important;
                 @include circle($bg-color-button, $color-inherit, 50px, 25px);
+                @media screen and (max-width: 810px) {
+                    @include circle($color-green, $color-inherit, 50px, 25px);
+                }
+                @media screen and (max-width: 740px) {
+                    width: 105px;
+                    margin: 0  auto;
+                }
             }
             .title__pricing{
                 margin: 0;
                 line-height: 60px;
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: bold;
                 font-family: $font-opensans;
                 text-transform: uppercase;
@@ -69,21 +103,34 @@
                 color: $color-text;
                 font-family: $font-opensans;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 13.5px;
             }
         }
         .free__table {
-          display: flex;
+            width: 58%;
+            display: flex;
+            @media screen and (max-width: 740px) {
+                width: 100%;
+                margin: 0 auto;
+            }
           .pricing__table {
+              width: 34%;
               border: 1px solid #ddd;
               .free__title{
                   padding: 16px 0;
                   text-align: center;
-                  font-size: 21px;
+                  font-size: 20px;
                   font-family: $font-opensans;
                   font-weight: bold;
                   hr {
                     @include hr (40px, $bg-color-button);
+                    @media screen and (max-width: 810px) {
+                        @include hr (40px, $color-green);
+                    }
+                  }
+                  @media screen and (max-width: 530px) {
+                    font-size: 16px !important;
+                    padding: 12px 0;
                   }
                 }
                 .tbody{
@@ -94,9 +141,12 @@
                         padding: 0;
                         li{
                             border-top: 1px solid #ddd;
-                            padding: 6px 45px;
+                            padding: 8px 0px;
                             font-size: 13px;
                             color: #737373;
+                            @media screen and (max-width: 530px) {
+                                font-size: 11px !important;
+                            }
                             &:nth-child(odd) {
                                 background-color: #fafafa;
                             }
@@ -112,22 +162,34 @@
                     padding: 30px 0;
                     background-color: #fafafa;
                     a{
-                        @include button(6px 25px)
+                        @include button(6px 25px);
+                        @media screen and (max-width: 530px) {
+                            @include button(5px 20px);
+                            font-size: 10px !important;
+                        }
                     }
                 }
           }
           .pricing__gold {
               border-top: 1px solid #ddd;
               position: relative;
+              width: 34%;
               top: -12px;
               .free__title{
                 background: $bg-color-button;
                 padding: 30px 0 15px 0;
                 color: $color-white;
                 text-align: center;
-                font-size: 21px;
+                font-size: 20px;
                 font-family: $font-opensans;
                 font-weight: bold;
+                @media screen and (max-width: 810px) {
+                    background: $color-green;
+                }
+                @media screen and (max-width: 530px) {
+                    font-size: 16px !important;
+                    padding: 22px 0 15px 0;
+                }
                 hr {
                   @include hr (40px, $color-white);
                 }
@@ -140,11 +202,14 @@
                     padding: 0;
                     li{
                         border-top: 1px solid #ddd;
-                        padding: 6px 45px;
+                        padding: 8px 0px;
                         font-size: 13px;
                         color: #737373;
                         &:nth-child(odd) {
                             background-color: #e6e6e6;
+                        }
+                        @media screen and (max-width: 530px) {
+                            font-size: 11px !important;
                         }
                     }
                     .first__gold{
@@ -155,14 +220,22 @@
               .btn__pricing{
                 position: absolute;
                 width: 100%;
-                top: 286px;
-                bottom: -22px;
+                top: 302px;
+                bottom: -25px;
                 text-align: center;
                 border-top: 1px solid #ddd;
                 background-color: #e6e6e6;
+                @media screen and (max-width: 530px) {
+                    bottom: -25px;
+                    top: 290px;
+                }
                 a{
                    line-height: 92px;
-                    @include button(6px 25px)
+                    @include button(6px 25px);
+                    @media screen and (max-width: 530px) {
+                        @include button(5px 20px);
+                        font-size: 10px !important;
+                    }
                 }
               }
           }

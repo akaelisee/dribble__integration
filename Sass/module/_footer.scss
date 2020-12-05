@@ -6,9 +6,19 @@ footer{
         padding: 50px 0 0 0;
         display: flex;
         justify-content: space-between;
+        @media screen and (max-width: 740px) {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
         .copyright {
             font-size: 17px;
             color: $color-text;
+            @media screen and (max-width: 835px) {
+                font-size: 15px;
+            }
+            @media screen and (max-width: 740px) {
+               margin-top: 25px;
+            }
         }
         .link{
            i{
@@ -17,9 +27,20 @@ footer{
                 font-weight: 600;
                 transition: all 0.2s ease-in-out;
                 cursor: pointer;
+                @media screen and (max-width: 810px) {
+                    font-size: 17px;
+                    margin: 0px 3px;
+                }
+                @media screen and (max-width: 740px) {
+                    font-size: 18px;
+                    margin: 0px 5px;
+                }
                 &:hover {
                     transition: all 0.2s ease-in-out;
                     color: $bg-color-button;
+                    @media screen and (max-width: 810px) {
+                        color: $color-green;
+                    }
                 }
            }
         }

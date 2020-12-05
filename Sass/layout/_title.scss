@@ -1,16 +1,40 @@
 .title{
     text-transform: uppercase;
+    display: flex;
+    @media screen and (max-width: 740px) {
+        text-align: center;
+        display: block;
+    }
     h1{
-        font-size: 18px;
-        font-weight: 700;
-        float: left;
+        font-size: 22px;
+        font-weight: bold;
+        margin: 0;
+        line-height: 45px;
+        @media screen and (max-width: 940px) {
+            font-size: 20px;
+        }
     }
-    p{
-        width: 90%;
-        font-size: 16px;
-        color: $color-text;
+    .title-text{
         border-left: 3px solid $bg-color-button;
-        margin-left: 120px;
-        padding-left: 10px;
+        margin-left: 20px;
+        padding-left: 12px;
+        @media screen and (max-width: 810px) {
+            border-left: 3px solid $color-green;
+        }
+        @media screen and (max-width: 740px) {
+            padding-top: 10px;
+            border-top: 3px solid $color-green;
+            border-left: none;
+            margin-left: 0px;
+        }
+        p{
+            font-size: 14px;
+            color: $color-text;
+            line-height: 22px;
+            @media screen and (max-width: 940px) {
+                font-size: 12px;
+            }
+        }
     }
+    
 }

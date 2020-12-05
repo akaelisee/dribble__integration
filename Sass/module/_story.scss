@@ -4,44 +4,77 @@
     @include polygon;
 
     .article-story{
-        margin: 155px 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 58.90% 37%);
-        gap: 3rem;
-
+        margin: 80px 0;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 740px) {
+           flex-direction: column;
+        }
+        @media screen and (max-width: 450px) {
+            margin: 80px 0;
+        }
         .article-story-primary{
+            width: 56%;
+            @media screen and (max-width: 740px) {
+                width: 100%;
+                margin-bottom: 25px;
+             }
             .circle{
                 float: left;
-               @include circle($bg-color-button, $color-inherit, 55px, 40px);
+                @include circle($bg-color-button, $color-inherit, 48px, 40px);
+                @media screen and (max-width: 1105px) {
+                    @include circle($color-green, $color-inherit, 45px, 35px);
+                }
+                @media screen and (max-width: 450px) {
+                    float: none;
+                    width: 22%;
+                    margin: 0 auto;
+                }
             }
             .arricle-story-text{
-                margin-left: 150px;
+                margin-left: 120px;
                 margin-top: -25px;
+                @media screen and (max-width: 985px) {
+                    margin-left: 110px;
+                }
+                @media screen and (max-width: 450px) {
+                    margin-left: 0px;
+                    text-align: center;
+                    margin-top: 25px;
+                }
                 h3{
                     font-size: 20px;
                     font-weight: 700;
                 }
                 p{
                     margin: 13px 0;
-                    text-align: justify;
                     color: $color-red;
+                    @media screen and (max-width: 985px) {
+                        font-size: 14px;
+                        margin: 0px 0 13px 0;
+                    }
                     &:last-child{
-                        color: black;
+                        font-size: 13px;
+                        color: $color-text;
+                        line-height: 25px;
+                        font-weight: 400;
                     }
                 }
             }
         }
         .article-story-second{
-            background: $color-red;
             position: relative;
+            width: 37%;
+            @media screen and (max-width: 740px) {
+                width: 100%;
+            }
             .article-story-profile{
-                i{
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    color: #ffffff;
-                    transform: translate(-50%, -50%);
-                    font-size: 45px;
+                @media screen and (max-width: 740px) {
+                    width: 85%;
+                    margin: 0 auto;
+                }
+                img {
+                    width: 100%;
                 }
             }
         }
@@ -52,37 +85,77 @@
     }
     
     .article-skills{
-        margin: 126px 0 0 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        margin: 100px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 740px) {
+           flex-direction: column-reverse;
+        }
+        @media screen and (max-width: 450px) {
+            margin: 65px 0 0 0;
+         }
         .article-showcase{
+            width: 46%;
+            @media screen and (max-width: 740px) {
+                width: 85%;
+                margin: 0 auto;
+            }
             img{
-                width: 82%;
+                width: 100%;
             }
         }
         .article-our-skills{
+            width: 46%;
+            @media screen and (max-width: 740px) {
+                width: 100%;
+                margin-bottom: 30px;
+            }
             .article-content{
                 .article-circle{
                     float: left;
-                    @include circle($bg-color-button, $color-inherit, 55px, 40px);
+                    @include circle($bg-color-button, $color-inherit, 48px, 40px);
+                    @media screen and (max-width: 1105px) {
+                        @include circle($color-green, $color-inherit, 45px, 35px);
+                    }
+                    @media screen and (max-width: 450px) {
+                        float: none;
+                        width: 22%;
+                        margin: 0 auto;
+                    }
                 }
                 .article-skills-text{
-                    margin-left: 150px;
+                    margin-left: 120px;
                     margin-top: -25px;
+                    @media screen and (max-width: 450px) {
+                        margin-top: 25px;
+                        text-align: center;
+                        margin-left: 0px;
+                    }
                     h3{
                         font-size: 20px;
                         font-weight: 700;
                     }
+                    p{
+                        font-size: 14px;
+                        color: $color-text;
+                        line-height: 25px;
+                        font-weight: 400;
+                    }
                 }
             }
             .article-bar{
-                padding: 15px 0;
+                padding: 4px 0;
+                @media screen and (max-width: 740px) {
+                    width: 85%;
+                    margin: 0 auto;
+                }
                 .group-bar{
-                    margin: 34px 0;
+                    margin: 25px 0;
                     label{
-                        font-size: 16px;
+                        font-size: 15px;
                         font-weight: 600;
                         font-family: $font-opensans;
+                        text-transform: uppercase;
                         span{
                             color: #bfbfbf;
                         }
@@ -98,6 +171,9 @@
                             position: absolute;
                             background: $bg-color-button;
                             height: 10px;
+                            @media screen and (max-width: 810px) {
+                                background: $color-green;
+                            }
                         }
                     }
                     .bar-design::after{

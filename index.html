@@ -8,11 +8,17 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
+<style>
+    
+.item__project {
+    display: none;
+}
+</style>
 <body>
 
     <!-- Header -->
     <header>
-        <div class="swiper-container">
+        <div class="swiper-container firstSwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="./sass/img/header.png" alt="image2">
@@ -58,7 +64,10 @@
                 <article class="article-about">
                     <div class="title l-container-title">
                         <h1>ABOUT</h1>
-                        <p>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée</p>
+                        <div class="title-text">
+                            <p>Le lorem ipsum est, en imprimerie, une suite de mots sans 
+                                signification utilisée à titre de pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte</p>
+                        </div>
                     </div>
 
                     <div class="article-story">
@@ -70,13 +79,13 @@
                                 <h3>OUR STORY</h3>
                                 <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. </p>
                                 <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
-                                    Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                                     Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a </p>
+                                    Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. 
+                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                             </div>
                         </div>
                         <div class="article-story-second">
                             <div class="article-story-profile">
-                                <i class="fas fa-camera"></i>
+                                <img src="./Sass/img/story.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -121,34 +130,35 @@
         <!-- End section about -->
 
         <!-- section image 1 -->
-        <!-- <section class="section-image">
+        <section class="section-image">
             <div class="l-bg-color">
                 <div class="l-container">
                     <div class="article-name">
                         <p>" <span>Simplicity is about subtracting the obvious</span>  "</p>
                         <p class="second"> adding the meaningful</p>
                         <hr>
-                        <span class="name">Aka Elisee</span>
+                        <span class="name"> JOHN MaeDa</span>
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
         <!-- end section image 1 -->
 
         <!-- section team-->
-        <!-- <section class="section-team l-section">
+        <section class="section-team l-section">
             <div class="l-container">
                 <article class="article-team">
                     <div class="title l-container-title">
                         <h1>TEAM</h1>
-                        <p>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée</p>
+                        <div class="title-text">
+                            <p>Le lorem ipsum est, en imprimerie, une suite de mots sans 
+                                signification utilisée à titre de pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte</p>
+                        </div>
                     </div>
                     <div class="article-members">
                         <div class="item-member">
                             <div class="user">
-                                <div class="user-border">
-                                    <i class="fas fa-user"></i>
-                                </div>
+                                <img src="./Sass/img/user.jpg" alt="">
                             </div>
                             <div class="title-user">
                                 <p class="name-user"> JOHN SMILE </p>
@@ -166,9 +176,7 @@
                         </div>
                         <div class="item-member">
                             <div class="user">
-                                <div class="user-border">
-                                    <i class="fas fa-user"></i>
-                                </div>
+                                <img src="./Sass/img/user2.jpeg" alt="">
                             </div>
                             <div class="title-user">
                                 <p class="name-user"> John with </p>
@@ -186,9 +194,7 @@
                         </div>
                         <div class="item-member">
                             <div class="user">
-                                <div class="user-border">
-                                    <i class="fas fa-user"></i>
-                                </div>
+                                <img src="./Sass/img/user3.jpeg" alt="">
                             </div>
                             <div class="title-user">
                                 <p class="name-user"> Martin Jone </p>
@@ -206,9 +212,7 @@
                         </div>
                         <div class="item-member">
                             <div class="user">
-                                <div class="user-border">
-                                    <i class="fas fa-user"></i>
-                                </div>
+                                <img src="./Sass/img/user4.jpg" alt="">
                             </div>
                             <div class="title-user">
                                 <p class="name-user"> Aka Abel </p>
@@ -227,11 +231,11 @@
                     </div>
                 </article>
             </div>
-        </section> -->
+        </section>
         <!-- section team -->
 
         <!-- section image 2 -->
-        <!-- <section class="section-image1">
+        <section class="section-image1">
             <div class="l-bg-color">
                 <div class="l-container">
                     <article class="article-project">
@@ -266,17 +270,20 @@
                     </article>
                 </div>
             </div>
-        </section> -->
+        </section>
         <!-- end section image 2 -->
         
         <!-- section service-->
-        <!-- <section class="section-service l-section">
+        <section class="section-service l-section">
             <div class="l-container">
                 <article class="article-service">
                     <div class="title l-container-title">
-                        <h1>SERVICES</h1>
-                        <p>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée</p>
-                    </div>
+                        <h1>SERVICE</h1>
+                        <div class="title-text">
+                            <p>Le lorem ipsum est, en imprimerie, une suite de mots sans 
+                                signification utilisée à titre de pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte</p>
+                        </div>
+                     </div>
                     <div class="content">
                         <div class="item-member">
                             <div class="dev">
@@ -319,7 +326,7 @@
                         </div>
                         <div class="free__table">
                             <!-- Basic -->
-                          <!-- <div class="pricing__table">
+                        <div class="pricing__table">
                             <div class="free__title">
                               <p> Basic </p>
                               <hr>
@@ -336,10 +343,10 @@
                             <div class="btn__pricing">
                                 <a> PURCHASE </a> 
                             </div>
-                          </div> -->
+                          </div>
                           <!-- End basic -->
                           <!-- Gold -->
-                          <!-- <div class="pricing__gold ">
+                        <div class="pricing__gold ">
                             <div class="free__title">
                               <p> GOLD </p>
                               <hr>
@@ -356,10 +363,10 @@
                             <div class="btn__pricing">
                                 <a> PURCHASE </a> 
                             </div>
-                          </div> -->
+                          </div>
                           <!-- End gold -->
                           <!-- Silver -->
-                          <!-- <div class="pricing__table">
+                        <div class="pricing__table">
                             <div class="free__title">
                               <p> SILVER </p>
                               <hr>
@@ -376,57 +383,106 @@
                             <div class="btn__pricing">
                                 <a> PURCHASE </a> 
                             </div>
-                          </div> -->
+                          </div>
                           <!-- End silver -->
-                        <!-- </div>
+                        </div>
                     </div>
                 </article>
             </div>
-        </section>  -->
+        </section>
         <!-- section service -->
 
         <!-- Section image 3 -->
-        <!-- <section class="section-image-thrid">
+        <section class="section-image-thrid">
             <div class="l-bg-color">
                 <div class="l-container">
                     <article class="article-name">
-                       <p class="name">Maria Jones</p>
-                       <hr>
-                       <div class="text">
-                           <p> “Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum </p>
-                            <p> auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.” </p>
-                       </div>
-                       <div class="img__person">
-                            <img src="./Sass/img/uers1.jpg" alt="">
-                       </div> 
-                        <div class="slide-circle l-container">
-                            <i class="fas fa-circle"></i>
-                            <i class="fas fa-circle"></i>
-                            <i class="fas fa-circle"></i>
-                        </div>                
-                    </article>
+                        <div class="swiper-container firstSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <p class="name">Maria Jones</p>
+                                    <hr>
+                                    <div class="text">
+                                        <p> “Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum </p>
+                                         <p> auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.” </p>
+                                    </div>
+                                    <div class="img__person">
+                                         <img src="./Sass/img/user3.jpeg" alt="">
+                                    </div>        
+                                </div>
+                                <div class="swiper-slide">
+                                    <p class="name">Jean Re</p>
+                                    <hr>
+                                    <div class="text">
+                                        <p> “Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum </p>
+                                         <p> auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.” </p>
+                                    </div>
+                                    <div class="img__person">
+                                         <img src="./Sass/img/uers1.jpg" alt="">
+                                    </div>        
+                                </div>
+                                <div class="swiper-slide">
+                                    <p class="name">Pascal Robert</p>
+                                    <hr>
+                                    <div class="text">
+                                        <p> “Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum </p>
+                                        <p> auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.” </p>
+                                    </div>
+                                    <div class="img__person">
+                                        <img src="./Sass/img/user4.jpg" alt="">
+                                    </div>        
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>     
+                     </article> 
                 </div>
             </div>
-        </section> -->
+        </section>
         <!-- Section image 3 -->
 
         <!-- section portfolio -->
-        <!-- <section class="section-portfolio l-section">
+        <section class="section-portfolio l-section">
             <div class="l-container">
                 <article class="article-portfolio">
                     <div class="title l-container-title">
                         <h1>PORTFOLIO</h1>
-                        <p>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée</p>
+                        <div class="title-text">
+                            <p>Le lorem ipsum est, en imprimerie, une suite de mots sans 
+                                signification utilisée à titre de pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte</p>
+                        </div>
                     </div>
                     <div class="slide__image">
-                        <div class="item__slide">
-                            <i class="fas fa-camera"></i>
+                        <div class="swiper-container lastSlider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item__slide">
+                                        <img src="./Sass/img/slide1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item__slide">
+                                        <img src="./Sass/img/slide2.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item__slide">
+                                        <img src="./Sass/img/slide3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-button-next btn__next"></div>
+                            <div class="swiper-button-prev btn__prev"></div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
                         </div>
+                        
                         <div class="slide__down">
                             <div class="btn__slide">
-                                <a href=""> <i class="fas fa-chevron-left"></i> </a>
-                                <a href=""> <i class="fas fa-chevron-right"></i> </a>
-                                <a href=""> <i class="fas fa-times"></i> </a>
+                                <span onclick="prev();"> <i class="fas fa-chevron-left"></i> </span>
+                                <span onclick="next();"> <i class="fas fa-chevron-right"></i> </span>
+                                <span onclick="stop();"> <i class="fas fa-times"></i> </span>
                             </div>
                             <div class="title__slide">
                                 <p>DIGITAL ARTWORK</p>
@@ -437,20 +493,17 @@
                     <hr>
                     <div class="grid__portfolio">
                         <div class="nav-project">
-                            <a href="#" class="project-item is-active-color">All WORKS</a>
-                            <a href="#" class="project-item">GRAPHICS</a>
-                            <a href="#" class="project-item">WEBDESIGN</a>
-                            <a href="#" class="project-item ">BRANDING</a>
-                            <a href="#" class="project-item">VIDEO</a>
-                            <a href="#" class="project-item">PHOTOGRAPHY</a>
+                            <span class="project-item active is-active-color" onclick="filterCategory('all')">All WORKS</span>
+                            <span class="project-item" onclick="filterCategory('graphics')">GRAPHICS</span>
+                            <span class="project-item" onclick="filterCategory('design')">WEBDESIGN</span>
+                            <span class="project-item" onclick="filterCategory('branding')">BRANDING</span>
+                            <span class="project-item" onclick="filterCategory('video')">VIDEO</span>
+                            <span class="project-item" onclick="filterCategory('photography')">PHOTOGRAPHY</span>
                         </div>
                         <div class="portfolio__project">
-                            <div class="item__project">
+                            <div class="item__project graphics">
                                 <div class="img_project">
                                     <img src="./Sass/img/graph.png" alt="">
-                                    <div class="camera">
-                                        <i class="fas fa-camera"></i>
-                                    </div>
                                     <div class="plus">
                                         <i class="fas fa-plus"></i>
                                     </div>
@@ -460,12 +513,9 @@
                                     <span> Graphics </span>
                                 </div>
                             </div>
-                            <div class="item__project">
+                            <div class="item__project photography">
                                 <div class="img_project">
                                     <img src="./Sass/img/tof1.jpeg" alt="">
-                                    <div class="camera">
-                                        <i class="fas fa-camera"></i>
-                                    </div>
                                     <div class="plus">
                                         <i class="fas fa-plus"></i>
                                     </div>
@@ -475,12 +525,9 @@
                                     <span> Photography </span>
                                 </div>
                             </div>
-                            <div class="item__project">
+                            <div class="item__project branding">
                                 <div class="img_project">
                                     <img src="./Sass/img/pont.jpg" alt="">
-                                    <div class="camera">
-                                        <i class="fas fa-camera"></i>
-                                    </div>
                                     <div class="plus">
                                         <i class="fas fa-plus"></i>
                                     </div>
@@ -490,12 +537,9 @@
                                     <span> Branding </span>
                                 </div>
                             </div>
-                            <div class="item__project">
+                            <div class="item__project graphics">
                                 <div class="img_project">
                                     <img src="./Sass/img/graph1.jpg" alt="">
-                                    <div class="camera">
-                                        <i class="fas fa-camera"></i>
-                                    </div>
                                     <div class="plus">
                                         <i class="fas fa-plus"></i>
                                     </div>
@@ -505,12 +549,9 @@
                                     <span> Graphics </span>
                                 </div>
                             </div>
-                            <div class="item__project change">
-                                <div class="img_project">
+                            <div class="item__project design">
+                                <div class="img_project ">
                                     <img src="./Sass/img/web.jpg" alt="">
-                                    <div class="camera">
-                                        <i class="fas fa-camera"></i>
-                                    </div>
                                     <div class="plus">
                                         <i class="fas fa-plus"></i>
                                     </div>
@@ -520,12 +561,9 @@
                                     <span> web Design </span>
                                 </div>
                             </div>
-                            <div class="item__project change">
+                            <div class="item__project video">
                                 <div class="img_project">
                                     <img src="./Sass/img/video.jpg" alt="">
-                                    <div class="camera">
-                                        <i class="fas fa-camera"></i>
-                                    </div>
                                     <div class="plus">
                                         <i class="fas fa-plus"></i>
                                     </div>
@@ -535,12 +573,9 @@
                                     <span> Video </span>
                                 </div>
                             </div>
-                            <div class="item__project change">
+                            <div class="item__project photography">
                                 <div class="img_project">
                                     <img src="./Sass/img/tof2.jpg" alt="">
-                                    <div class="camera">
-                                        <i class="fas fa-camera"></i>
-                                    </div>
                                     <div class="plus">
                                         <i class="fas fa-plus"></i>
                                     </div>
@@ -550,12 +585,9 @@
                                     <span> Photography </span>
                                 </div>
                             </div>
-                            <div class="item__project change">
+                            <div class="item__project change branding">
                                 <div class="img_project">
                                     <img src="./Sass/img/brand1.png" alt="">
-                                    <div class="camera">
-                                        <i class="fas fa-camera"></i>
-                                    </div>
                                     <div class="plus">
                                         <i class="fas fa-plus"></i>
                                     </div>
@@ -569,11 +601,11 @@
                     </div>
                 </article>
             </div>
-        </section> -->
+        </section>
         <!-- end section portfolio -->
 
         <!-- Section image 4 -->
-        <!-- <section class="section-image-four">
+        <section class="section-image-four">
           <div class="l-bg-color">
               <div class="l-container">
                   <article class="article-twitter">
@@ -587,21 +619,24 @@
                   </article>
               </div>
           </div>
-        </section> -->
+        </section>
         <!-- Section image 4 -->
 
         <!-- section blog -->
-        <!-- <section class="section-blog l-section">
+        <section class="section-blog l-section">
             <div class="l-container">
                 <article class="article-blog">
                     <div class="title l-container-title">
                         <h1>Blog</h1>
-                        <p>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée</p>
+                        <div class="title-text">
+                            <p>Le lorem ipsum est, en imprimerie, une suite de mots sans 
+                                signification utilisée à titre de pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte</p>
+                        </div>
                     </div>
                     <div class="grid__blog">
                         <div class="item__blog">
                             <div class="img__blog">
-                                <i class="fas fa-camera"></i>
+                                <img src="Sass/img/pexels.jpg" alt="">
                             </div>
                             <div class="detail__blog">
                                 <div class="detail__perosn">
@@ -633,7 +668,7 @@
                         </div>
                         <div class="item__blog">
                             <div class="img__blog">
-                                <i class="fas fa-camera"></i>
+                                <img src="Sass/img/pexels1.jpg" alt="">
                             </div>
                             <div class="detail__blog">
                                 <div class="detail__perosn">
@@ -665,7 +700,7 @@
                         </div>
                         <div class="item__blog">
                             <div class="img__blog">
-                                <i class="fas fa-camera"></i>
+                                <img src="Sass/img/pexels2.jpg" alt="">
                             </div>
                             <div class="detail__blog">
                                 <div class="detail__perosn">
@@ -697,7 +732,7 @@
                         </div>
                         <div class="item__blog">
                             <div class="img__blog">
-                                <i class="fas fa-camera"></i>
+                                <img src="Sass/img/pexels3.jpg" alt="">
                             </div>
                             <div class="detail__blog">
                                 <div class="detail__perosn">
@@ -730,11 +765,11 @@
                     </div>
                 </article>
             </div>
-        </section> -->
+        </section>
         <!-- end section blog -->
 
         <!-- section image 5 -->
-        <!-- <section class="section-image-five">
+        <section class="section-image-five">
             <div class="l-bg-color">
                 <div class="l-container">
                     <article class="article-customer">
@@ -766,16 +801,19 @@
                     </article>
                 </div>
             </div>
-        </section> -->
+        </section>
         <!-- end section image 5 -->
         
         <!-- section contact -->
-        <!-- <section class="section-contact l-section">
+        <section class="section-contact l-section">
             <div class="l-container">
                 <article class="article-contact">
                     <div class="title l-container-title">
                         <h1>Contact</h1>
-                        <p>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée</p>
+                        <div class="title-text">
+                            <p>Le lorem ipsum est, en imprimerie, une suite de mots sans 
+                                signification utilisée à titre de pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte</p>
+                        </div>
                     </div>
                     <div class="conatct">
                         <div class="mesasge">
@@ -806,7 +844,7 @@
                             </div>
                             <div class="text">
                                 <p> Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a 
-                                    odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                                    odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat
                                 </p>
                             </div>
                             <div class="link__info">
@@ -833,22 +871,22 @@
                     </div>
                 </article>
             </div>
-        </section> -->
+        </section>
         <!-- end section contact -->
 
         <!-- Section image 6 -->
-        <!-- <section class="section-image-six">
+        <section class="section-image-six">
             <div class="l-container">
                 <article class="article-map">
                                  
                 </article>
             </div>
-          </section> -->
+          </section>
           <!-- Section image 6 -->
     <!-- End section -->
 
     <!-- footer -->
-    <!-- <footer>
+    <footer>
         <div class="l-container">
             <div class="section-footer">
                 <div class="copyright">
@@ -865,7 +903,7 @@
                 </div>
             </div>
         </div>
-    </footer> -->
+    </footer>
     <!-- end footer -->
 <script src="https://kit.fontawesome.com/22f93f1c2f.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>

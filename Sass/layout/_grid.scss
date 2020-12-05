@@ -1,20 +1,23 @@
 .l-container{
-    width: 1170px;
+    width: 945px;
     margin: 0 auto;
     position: relative;
     z-index: 3;
-    @media screen and (max-width: 1200px) {
-        width: 100%;
+    @media screen and (max-width: 1000px) {
+        width: 96%;
     }
 }
 
 .l-container-title{
-    width: 95%;
+    width: 85%;
     margin: 0 auto;
+    @media screen and (max-width: 940px) {
+        width: 95%;
+    }
 }
 
 .l-section{
-    padding: 101px 0;
+    padding: 70px 0;
 }
 
 .l-bg-color{

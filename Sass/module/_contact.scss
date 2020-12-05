@@ -4,15 +4,24 @@
     @include polygon;
 
     .conatct {
-        margin: 150px 0 0 0;
+        margin: 130px 0 0 0;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 5rem;
+        grid-template-columns: 52% 45%;
+        column-gap: 3rem;
+        @media screen and (max-width: 740px) {
+           display: block;
+        }
+        @media screen and (max-width: 1000px) {
+            column-gap: 2rem;
+         }
         .mesasge{
             .title__message{
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: bold;
                 text-transform: uppercase;
+                @media screen and (max-width: 740px) {
+                   text-align: center;
+                }
             }
             .form {
                 margin: 25px 0 15px 0;
@@ -34,9 +43,15 @@
                         color: $color-text;
                         &:focus {
                             border: 2px solid $bg-color-button;
+                            @media screen and (max-width: 810px) {
+                                border: 2px solid $color-green;
+                            }
                         }
                         &:focus + i {
                             color: $bg-color-button;
+                            @media screen and (max-width: 810px) {
+                                color: $color-green;
+                            }
                         }
                     }
                     i{
@@ -59,9 +74,15 @@
                         border: 2px solid #f3f3f3;
                         &:focus {
                             border: 2px solid $bg-color-button;
+                            @media screen and (max-width: 810px) {
+                                border: 2px solid $color-green;
+                            }
                         }
                         &:focus + i {
                             color: $bg-color-button;
+                            @media screen and (max-width: 810px) {
+                                color: $color-green;
+                            }
                         }
                     }
                 }
@@ -76,22 +97,35 @@
                 .btn-submit{
                     margin-top: 22px;
                     a{
-                        @include button (10px 15px)
+                        @include button (8px 40px)
+                    }
+                    @media screen and (max-width: 740px) {
+                        text-align: center;
                     }
                 }
             }
         }
         .info {
             .title__message{
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: bold;
                 text-transform: uppercase;
+                @media screen and (max-width: 740px) {
+                    margin-top: 55px;
+                    text-align: center;
+                }
             }
             .text{
                 margin: 25px 0;
-                font-size: 16px;
+                font-size: 14px;
                 color: #737373;
                 line-height: 30px;
+                @media screen and (max-width: 900px) {
+                    font-size: 14px;
+                }
+                @media screen and (max-width: 740px) {
+                    font-size: 15px;
+                }
             }
             .link__info{
                 margin: 16px 0;
@@ -104,6 +138,9 @@
                         padding: 15px;
                         border: 2px solid $bg-color-button;
                         border-radius: 50%;
+                        @media screen and (max-width: 810px) {
+                            border: 2px solid $color-green;
+                        }
                         i {
                             position: absolute;
                             top: 50%;
@@ -114,8 +151,18 @@
                         }
                     }
                     span {
-                        font-size: 16px;
+                        font-size: 14px;
                         color: #737373;
+                        font-weight: bold;
+                        @media screen and (max-width: 900px) {
+                            font-size: 13px;
+                        }
+                        @media screen and (max-width: 740px) {
+                            font-size: 13px;
+                        }
+                        @media screen and (max-width: 390px) {
+                            font-size: 12px;
+                        }
                     }
                 }
             }

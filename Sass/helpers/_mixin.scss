@@ -19,6 +19,7 @@
     background: $image fixed;
     background-size: cover;
     height: 550px;
+    
 }
 
 @mixin circle ($color, $icolor, $padding, $size) {
@@ -27,6 +28,9 @@
     border: 2px solid $bg-color-button;
     border-radius: 50%;
     transition: 0.4s ease;
+    @media screen and (max-width: 810px) {
+        border: 2px solid $color-green;
+    }
     &:hover{
         transition: 0.4s ease;
         border: 2px solid $color;
@@ -66,7 +70,7 @@
         background-color: $bg-color-button;
         color: $color-white;
     }
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 810px) {
         border: 2px solid $color-green; 
         &:hover {
             transition: all 0.3s ease-in-out;

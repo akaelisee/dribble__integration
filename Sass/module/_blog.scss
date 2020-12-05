@@ -3,47 +3,67 @@
     z-index: 4;
     @include polygon;
     .grid__blog{
-        margin: 150px 0 0 0;
+        margin: 130px 0 0 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        column-gap: 60px;
+        @media screen and (max-width: 650px) {
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+         }
+        column-gap: 50px;
         row-gap: 5px;
         .img__blog{
             position: relative;
-            background-color: #b7b7b7;
-            height: 302px;
-            i{
-                font-size: 60px;
-                color: $color-white;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+            img {
+                width: 100%;
             }
         }
         .detail__blog{
             position: relative;
-            top: -55px;
+            top: -58px;
             display: grid;
-            grid-template-columns: 25% 75%;
+            grid-template-columns: 22.3% 77.8%;
+            @media screen and (max-width: 810px) {
+                top: -54px;
+             }
+             @media screen and (max-width: 470px) {
+                grid-template-columns: 25% 75%;
+             }
+             
             .detail__perosn{
                 text-align: right;
                 .icon {
                     margin: 10px 0 10px 0;
                     i{
                         background-color: $bg-color-button;
-                        padding: 12.5px;
+                        padding: 10px;
                         color: $color-white;
                         font-size: 20px;
+                        @media screen and (max-width: 810px) {
+                           background: $color-green;
+                           padding: 8px;
+                        }
                     }
                 }
                 .text{
-                    margin-top: 25px;
-                    margin-right: 23px;
+                    margin-top: 30px;
+                    margin-right: 13px;
+                    @media screen and (max-width: 900px) {
+                        margin-right: 13px;
+                    }
+                    @media screen and (max-width: 383px) {
+                        margin-top: 43px;
+                     }
                     span{
                         display: block;
-                        font-size: 16px;
+                        font-size: 13px;
                         color: $color-text;
+                        @media screen and (max-width: 900px) {
+                            margin-left: 10px;
+                            font-size: 11px;
+                        }
+                        @media screen and (max-width: 470px) {
+                            font-size: 9px;
+                         }
                     }
                 }
             }
@@ -51,15 +71,30 @@
                 background-color: $color-white;
                 .detail__title{
                     padding: 16px 0;
-                    font-size: 20px;
+                    font-size: 15px;
                     font-weight: bold;
-                    margin-left: 20px;
+                    margin-left: 13px;
+                    text-transform: uppercase;
+                    @media screen and (max-width: 900px) {
+                        margin-left: 10px;
+                        font-size: 13px;
+                    }
                 }
                 .text{
                     margin-top: 19px;
-                    margin-left: 20px;
-                    font-size: 16px;
+                    margin-left: 13px;
+                    font-size: 13px;
                     color: $color-text;
+                    @media screen and (max-width: 900px) {
+                        margin-left: 10px;
+                        font-size: 12px;
+                    }
+                    @media screen and (max-width: 470px) {
+                        font-size: 11px;
+                     }
+                     @media screen and (max-width: 383px) {
+                        margin-top: 0px;
+                     }
                 }
                 .btn_blog{
                     margin-top: 33px;

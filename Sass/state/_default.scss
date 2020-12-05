@@ -8,8 +8,14 @@
 
 .is-active{
   color: $color-black !important;
+  @media screen and (max-width: 810px) {
+    color: $color-green !important;
+  } 
 }
 
 .is-active-color {
   color: $bg-color-button !important;
+  @media screen and (max-width: 810px) {
+    color: $color-green !important;
+  } 
 }

@@ -2,33 +2,71 @@
     position: relative;
     z-index: 4;
     @include polygon;
-
+    .swiper-container {
+        .swiper-pagination{
+            position: block  !important;
+            bottom: 0% !important;
+            z-index: 10;
+            right: 20px;
+            // top: 50px; 
+            transform: translate3d(0px, -10%, 0);
+            span {
+                font-size: 50px !important;
+                width: 10px !important;
+                height: 10px !important;
+                background-color: #ffffff !important;
+                margin: 4px 0px !important;
+                display: block;
+    
+            }
+        }
+    }
+    .lastSlider{
+        width: 100%;
+        height: 580px;
+        overflow: hidden;
+        @media screen and (max-width: 870px) {
+            
+            height: 500px;
+        }
+        @media screen and (max-width: 740px) {
+            height: 450px;
+        }
+        @media screen and (max-width: 660px) {
+            height: 380px;
+        }
+        @media screen and (max-width: 550px) {
+            height: 300px;
+        }
+        @media screen and (max-width: 425px) {
+            width: 90%;
+            margin: 0 auto;
+            height: 200px;
+        }
+        @media screen and (max-width: 350px) {
+            height: 180px;
+        }
+    }
     .slide__image{
-        margin: 155px 0 122px 0;
+        margin: 115px 0 100px 0;
         .item__slide {
-            position: relative;
-            background: $bg-color-button;
             width: 100%;
-            height: 583px;
-            i {
-                position: absolute;
-                font-size: 57px;
-                color: #ffffff;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+            img {
+                width: 100%;
             }
         }
         .slide__down{
             text-align: center;
             margin: 45px 0;
             .btn__slide{
-                a{
+                span{
                     text-decoration: none;
                     border: 1px solid #dddddd;
                     padding: 3px 14px;
                     margin-right: 5px;
                     position: relative;
+                    cursor: pointer;
+                    
                     i{
                         position: absolute;
                         top: 50%;
@@ -55,20 +93,62 @@
         @include hr (100%, $color-hr)
     }
     .grid__portfolio{
-        margin: 120px 0;
+        margin: 100px 0 0px 0;
+        @media screen and (max-width: 800px) {
+            // font-size: 13px;
+        }
         .nav-project {
             text-align: center;
-            a { 
+            span{
+                cursor: pointer; 
                 font-size: 14px; 
                 font-family: $font-opensans; 
                 font-weight: bold;
                 color: $color-black;
+                transition: all 0.3s;
+                @media screen and (max-width: 800px) {
+                    font-size: 13px;
+                }
+                @media screen and (max-width: 700px) {
+                    font-size: 12px;  
+                }   
+                @media screen and (max-width: 610px) {
+                    font-size: 11px;   
+                }
+                @media screen and (max-width: 542px) {
+                    font-size: 10px;  
+                }
+                @media screen and (max-width: 462px) {
+                    font-size: 9px;  
+                }
+                &:hover {
+                    color: $bg-color-button;
+                    @media screen and (max-width: 810px) {
+                        color: $color-green;
+                    } 
+                }
             }
             .project-item{
                 &::after{
                     content: "\\\\";
-                    padding: 0 25px;
+                    padding: 0 20px;
                     color: $color-font;
+                    @media screen and (max-width: 800px) {
+                        padding: 0 15px;
+                    }
+                    @media screen and (max-width: 700px) {
+                        padding: 0 11px; 
+                    }   
+                    @media screen and (max-width: 610px) {
+                        padding: 0 8px;   
+                    }
+                    @media screen and (max-width: 542px) {
+                        padding: 0 4px;   
+                    } 
+                    @media screen and (max-width: 462px) {
+                        padding: 0 0px;  
+                        content: "\\"; 
+                    }
                 }
                 &:last-child::after{
                     display: none;
@@ -76,15 +156,18 @@
             }
         }
         .portfolio__project{
-            margin: 82px 0;
+            margin: 62px 0 0 0;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
+            @media screen and (max-width: 900px) {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
             .item__project{
                 cursor: pointer;
                 .img_project{
                     position: relative;
                     width: 100%;
-                    height: 220px;
+                    height: 190px;
                     i{
                         font-size: 60px;
                         color: $color-white;
@@ -99,7 +182,6 @@
                     img {
                         width: 100%;
                         height: 100%;
-                        display: none;
                         transition: all 0.2s ease;
                     }
                 }
@@ -117,50 +199,42 @@
                         font-size: 14px;
                     }
                 }
-
-                &:nth-child(odd){
-                    background-color: #c7c7c7;
-                }
-                &:nth-child(even){
-                    background-color: #b7b7b7;
-                }
                 &:hover{
                     transition: all 0.2s ease;
-
+                    
                     .img_project{
-                        background-color: rgba(237, 234, 234, 0.281);
+                        background-color:rgba(238, 234, 233, 0.808);
                         img{
                             display: block;
                             opacity: 0.5;
                             transition: all 0.2s ease;
-                        }
-                        .camera{
-                            display: none;
                         }
                         .plus{
                             display: block;
                             background-color: rgba(237, 234, 234, 0.281);
                             i {
                                 background-color: #f0c37e;
-                                padding: 15px 20px;
+                                padding: 12px 15px;
                                 border-radius: 50%;
+                                font-size: 45px;
+                                @media screen and (max-width: 810px) {
+                                    background-color:$color-green;
+                                }
                             }
                         }
                     }
                     p{
                         transition: all 0.1s ease-in-out;
                         color: $bg-color-button;
+                        @media screen and (max-width: 810px) {
+                            color:$color-green;
+                        }
                     }
-                }
-            }
-            .change{
-                &:nth-child(odd){
-                    background-color:  #b7b7b7;
-                }
-                &:nth-child(even){
-                    background-color: #c7c7c7;
                 }
             }
         }
     }
+    .show {
+        display: block;
+      }
 }
