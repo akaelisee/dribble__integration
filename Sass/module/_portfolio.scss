@@ -94,8 +94,8 @@
     }
     .grid__portfolio{
         margin: 100px 0 0px 0;
-        @media screen and (max-width: 800px) {
-            // font-size: 13px;
+        @media screen and (max-width: 600px) {
+            margin: 60px 0 0px 0;
         }
         .nav-project {
             text-align: center;
@@ -161,6 +161,10 @@
             grid-template-columns: repeat(4, 1fr);
             @media screen and (max-width: 900px) {
                 grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+            @media screen and (max-width: 600px) {
+                width: 85%;
+                margin: 62px auto 0 auto;
             }
             .item__project{
                 cursor: pointer;

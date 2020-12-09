@@ -7,6 +7,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         @media screen and (max-width: 650px) {
+            width: 95%;
+            margin: 62px auto 0 auto;
             grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
          }
         column-gap: 50px;
@@ -99,7 +101,10 @@
                 .btn_blog{
                     margin-top: 33px;
                     a{
-                        @include button (10px 25px)
+                        @include button (10px 25px);
+                        @media screen and (max-width: 650px) {
+                            @include button (8px 20px);
+                        }
                     }
                 }
             }

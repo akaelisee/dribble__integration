@@ -181,6 +181,15 @@ header{
                 @include button (8px 33px)
             }
         }
+        .scroll__bottom {
+            background-color: $bg-color-button;
+            color: #fff;
+            font-size: 25px;
+            padding: 10px;
+            width: 50px;
+            position: fixed;
+            z-index: 788;
+        }
     }
 
 }

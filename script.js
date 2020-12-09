@@ -35,6 +35,7 @@ spaceBetween: 30,
   }
 });
 
+// Slide
 function next() {
    return swiper2.slideNext();
 }
@@ -47,52 +48,8 @@ function stop() {
   return swiper2.autoplay.stop();
 }
 
-// Filter category
-// filterCategory("all");
-// function filterCategory(category) {
-//   let selector, i;
-//   selector = document.getElementsByClassName("item__project");
-//   if (category == "all") category = "";
-//   for (i = 0; i < selector.length; i++) {
-//     removeCategory(selector[i], "show");
-//     if (selector[i].className.indexOf(selector) > -1) addCategory(selector[i], "show");
-//   }
-// }
 
-// function addCategory(element, name) {
-//   let i, arr1, arr2;
-//   arr1 = element.className.split(" ");
-//   arr2 = name.split(" ");
-//   for (i = 0; i < arr2.length; i++) {
-//     if (arr1.indexOf(arr2[i]) == -1) { 
-//       element.className += " " + arr2[i];
-//     }
-//   }
-// }
-
-// function removeCategory(element, name) {
-//   let i, arr1, arr2;
-//   arr1 = element.className.split(" ");
-//   arr2 = name.split(" ");
-//   for (i = 0; i < arr2.length; i++) {
-//     while (arr1.indexOf(arr2[i]) > -1) {
-//       arr1.splice(arr1.indexOf(arr2[i]), 1);     
-//     }
-//   }
-//   element.className = arr1.join(" ");
-// }
-
-// // Add active class to the current button (highlight it)
-// let btnContainer = document.querySelector(".nav-project");
-// let btns = btnContainer.getElementsByClassName("project-item");
-// for (let i = 0; i < btns.length; i++) {
-//   btns[i].addEventListener("click", function(){
-//     var current = document.getElementsByClassName("active");
-//     current[0].className = current[0].className.replace(" active", "");
-//     this.className += " active";
-//   });
-// }
-
+// Filter Category
 filterCategory("all")
 function filterCategory(c) {
   var x, i;
@@ -135,3 +92,19 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+// Scroll
+$(document).ready(function(){
+  $('.navbar a').on('click', function(e) {
+    if(this.hash !== '') {
+      e.preventDefault();
+       const hash = this.hash;
+       $('html, body').animate(
+         {
+           scrollTop: $(hash).offset().top
+         },
+         800
+       );
+    }
+  })
+});

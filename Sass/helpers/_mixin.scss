@@ -7,11 +7,14 @@
         top: -30px; left: 0; right: 0; bottom: -30px;
         transform: skewY(-2deg);
         transform-origin:  0%, 0;
+        z-index: 2;
     }
 
     &::after{
-        background: $color-white;
+        background: inherit;
         transform-origin:  100%, 0;
+        z-index: 2;
+
     }
 }
 
@@ -76,5 +79,8 @@
             transition: all 0.3s ease-in-out;
             background-color: $color-green;
         }       
+    }
+    @media screen and (max-width: 650px) {
+        font-size: 12px;  
     }
 }
