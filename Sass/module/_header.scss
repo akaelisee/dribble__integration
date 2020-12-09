@@ -2,9 +2,15 @@ header{
     position: relative;
     height: 110vh;
     z-index: 2;
+    @media screen and (max-width: 600px) {
+        height: 90vh;
+    }
     img{
         width: 100%;
         height: 110vh;
+        @media screen and (max-width: 600px) {
+            height: 90vh;
+        }
     }
     
     .header-float{
@@ -57,6 +63,9 @@ header{
                         font-size: 25px;
                     } 
                 }
+                @media screen and (max-width: 600px) {
+                    margin-top: 20px;
+                }
             }
 
             .navbar-menu{
@@ -67,6 +76,9 @@ header{
                     @media screen and (max-width: 840px) {
                         margin: 40px 0 0 0;
                     }
+                }
+                @media screen and (max-width: 600px) {
+                    margin: 20px 0 0 0;
                 }
                 a{ 
                     font-size: 14px; 
@@ -121,8 +133,8 @@ header{
             text-align: center;
             color: $color-white;
             margin-top: 11.5rem;
-            @media screen and (max-width: 525px) {
-                margin-top: 7rem;
+            @media screen and (max-width: 600px) {
+                margin-top: 3rem;
             }  
             margin-bottom: 0px;
             width: 100%;
@@ -178,7 +190,10 @@ header{
                 line-height: 100px;
                 font-weight: 400 !important;
                 color: #fff !important;
-                @include button (8px 33px)
+                @include button (8px 33px);
+                @media screen and (max-width: 600px) {
+                    line-height: 50px;
+                }
             }
         }
         .scroll__bottom {

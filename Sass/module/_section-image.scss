@@ -1,6 +1,6 @@
 .section-image{
     position: relative;
-    @include section-image(url(sass/img/bgImage.png));
+    @include section-image(url(sass/img/image3.jpg));
     .article-name{
         text-align: center;
         position: absolute;
@@ -85,7 +85,7 @@
 
 
 .section-image1{
-    @include section-image(url(sass/img/bgImage.png));
+    @include section-image(url(sass/img/image1.jpg));
     .article-project{
         position: relative;
         top: 160px;
@@ -140,11 +140,14 @@
 }
 
 .section-image-thrid{
-    @include section-image(url(sass/img/bgImage.png));
+    @include section-image(url(sass/img/image4.jpg));
     .article-name{
         position: relative;
         top: 120px;
         text-align: center;
+        @media screen and (max-width: 600px) {
+            top: 90px;
+        }
 
         .name{
             color: $color-white;
@@ -192,7 +195,7 @@
 }
 
 .section-image-four{
-    @include section-image(url(sass/img/bgImage.png));
+    @include section-image(url(sass/img/balle.jpg));
     .article-twitter{
         position: relative;
         top: 120px;
@@ -235,7 +238,7 @@
 }
 
 .section-image-five{
-    @include section-image(url(sass/img/bgImage.png));
+    @include section-image(url(sass/img/image5.jpg));
     .article-customer{
         position: relative;
         top: 150px;

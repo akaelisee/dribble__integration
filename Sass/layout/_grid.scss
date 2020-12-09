@@ -18,6 +18,9 @@
 
 .l-section{
     padding: 70px 0;
+    @media screen and (max-width: 600px) {
+        padding: 40px 0;
+    }
 }
 
 .l-bg-color{
